@@ -2,7 +2,7 @@ module.exports ={
     database: {
         host: 'localhost',
         user: 'root',
-        password: '****',
+        password: 'Tetian96',
         database: 'anomalias_bgp'
     }
 }

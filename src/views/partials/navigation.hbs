@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
     <div class="container-fluid">
@@ -9,10 +8,11 @@
     <div class="collapse navbar-collapse" id="navbarNav">
      <img src="/img/logo.jfif" alt="BGP" class=".align-bottom rounded-circle w-45 " width="45" height="45"> 
       <ul class="navbar-nav ml-auto">
-        
-        <li class="nav-item">
+        <li>
           <a class="nav-link active" aria-current="page" href="/">Inicio</a>
         </li>
+        {{#if user}}
+        <li class="nav-item">
         <div class="dropdown show">
           <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Observaciones
@@ -24,9 +24,25 @@
            
           </div>
         </div>
-        <li class="nav-item">
+        
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
         </li>
+        <li class="nav-item">
+          <a href="/profile" class="nav-link">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a href="/logout" class="nav-link">Cerrar Sesion</a>
+        </li>
+
+        {{else}}
+          <li class="nav-item">
+            <a href="/signin" class="nav-link">Iniciar Sesion</a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link">Registrarse</a>
+          </li>
+        {{/if}}
+        
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
